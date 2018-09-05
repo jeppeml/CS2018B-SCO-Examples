@@ -2,10 +2,10 @@
 class.Chicken.image=pelican.png
 class.Chicken.superclass=greenfoot.Actor
 class.MyWorld.superclass=greenfoot.World
-editor.fx.0.height=733
-editor.fx.0.width=1280
+editor.fx.0.height=0
+editor.fx.0.width=0
 editor.fx.0.x=0
-editor.fx.0.y=24
+editor.fx.0.y=0
 mainWindow.height=733
 mainWindow.width=1280
 mainWindow.x=0
