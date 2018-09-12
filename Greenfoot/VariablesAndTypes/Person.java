@@ -1,17 +1,26 @@
 import greenfoot.*;  
+import java.util.*;
+
 public class Person extends Actor
 {
-    int health = 0; // weird measurement of health
-    float height = 0.0f; // meters
-    float weight = 0.0f; // kilo-grams
-    boolean isCool = false;
-    String name = "";
-    int acts = 0;
+    private int health = 0; // weird measurement of health
+    private float height = 0.0f; // meters
+    private float weight = 0.0f; // kilo-grams
+    private boolean isCool = false;
+    private String name = "";
+    private int acts = 0;
+    
+    public int getHealth()
+    {
+        
+        return health;
+    }
     
     // Constructor
     public Person()
     {
-        health = Greenfoot.getRandomNumber(110-11)+11; // 10-100
+       
+        health = Greenfoot.getRandomNumber(100-10)+10; // 10-100
         height = (Greenfoot.getRandomNumber(250-100)+100)/100f;
         weight = (Greenfoot.getRandomNumber(1500-500)+500)/10f;
         isCool = (Greenfoot.getRandomNumber(2)==1);
@@ -23,12 +32,17 @@ public class Person extends Actor
     {
         this();
         this.name = name;
+        Random r = new Random();
+        r.nextGaussian();
+        
     }
     
     // Constructor
     public Person(String name, int health, 
         float height, float weight, boolean isCool)
     {
+        
+        
         this.health = health; 
         this.height = height;
         this.weight = weight;
@@ -37,8 +51,10 @@ public class Person extends Actor
         
     }
     
+    
     public void act()
     {
+        
         acts = acts + 1;
         if(acts % 30 == 0)
         {
@@ -51,8 +67,6 @@ public class Person extends Actor
         }
         move(2);
         checkAndDie();
-        
-        
     }
     
     private void checkAndDie()
