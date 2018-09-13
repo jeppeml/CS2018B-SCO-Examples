@@ -1,0 +1,16 @@
+#Greenfoot properties
+#Thu Sep 13 09:30:35 CEST 2018
+class.Leaf.image=leaf.png
+class.Wombat.image=wombat.png
+class.Snake.superclass=greenfoot.Actor
+mainWindow.width=850
+class.Wombat.superclass=greenfoot.Actor
+class.MyWorld.superclass=greenfoot.World
+project.charset=UTF-8
+version=3.0.0
+world.lastInstantiated=MyWorld
+class.Snake.image=snake2.png
+mainWindow.y=40
+class.Leaf.superclass=greenfoot.Actor
+mainWindow.x=40
+mainWindow.height=600
