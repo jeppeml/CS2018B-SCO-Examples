@@ -15,6 +15,16 @@ public class Wombat extends Actor
         }
     }    
     
+    public int getLeavesEaten()
+    {
+        return leavesEaten;
+    }
+    
+    public int getStepsTaken()
+    {
+        return stepsTaken;
+    }
+    
     public void eatLeaf()
     {
         leavesEaten++;
