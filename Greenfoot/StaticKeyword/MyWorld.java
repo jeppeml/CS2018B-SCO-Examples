@@ -22,5 +22,15 @@ public class MyWorld extends World
         addObject(sherman,400,100);
         addObject(peterS,200,200);
         
+        Cherry sweet = new Cherry();
+        Cherry sour  = new Cherry();
+        addObject(sweet,175,146);
+        addObject(sour,345,276);
+        
+        
+        // Testing Calculator class
+        double dist = ActorCalculator.getDistanceBetweenActors(sweet, sour);
+                        
+        showText(""+dist, 400, 300);
     }
 }

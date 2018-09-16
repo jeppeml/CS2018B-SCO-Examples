@@ -1,12 +1,16 @@
 #Greenfoot properties
-#Fri Sep 14 09:12:39 CEST 2018
+#Fri Sep 14 10:25:21 CEST 2018
 class.Alligator.image=alligator.png
 class.Alligator.superclass=greenfoot.Actor
 mainWindow.width=850
+class.ActorCalculator.superclass=Calculator
+class.Calculator.superclass=
 class.MyWorld.superclass=greenfoot.World
+class.Cherry.image=cherries.png
 project.charset=UTF-8
 version=3.0.0
 world.lastInstantiated=MyWorld
 mainWindow.y=40
 mainWindow.x=40
+class.Cherry.superclass=greenfoot.Actor
 mainWindow.height=600
