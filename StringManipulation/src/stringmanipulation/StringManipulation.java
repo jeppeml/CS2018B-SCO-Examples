@@ -12,8 +12,6 @@ import java.util.Scanner;
  * @author jeppjleemoritzled
  */
 public class StringManipulation{
- 
-    
     /**
      * @param args the command line arguments
      */
@@ -28,10 +26,8 @@ public class StringManipulation{
         char ch = 'c';
         for (int i = 0; i < userInput.length(); i++) {
             char firstCharacter = userInput.toCharArray()[i];
+            // or use: char firstCharacter = userInput.charAt(i);
             System.out.println("Input: " + firstCharacter);
         }
-        
     }
-    
-    
 }
