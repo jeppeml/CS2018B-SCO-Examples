@@ -12,14 +12,26 @@ import java.util.Scanner;
  * @author jeppjleemoritzled
  */
 public class StringManipulation{
+ 
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         System.out.println("Rhello! World");
-        Scanner scanner = new Scanner(System.in); // get from keyboard input
-        String userInput = scanner.nextLine(); // halt and wait for System.in
-        System.out.println("Input: " + userInput);
+        // get from keyboard input
+        Scanner scanner = new Scanner(System.in); 
+        // halt and wait for System.in
+        
+        String userInput = scanner.nextLine(); 
+        String mystring = "";
+        char ch = 'c';
+        for (int i = 0; i < userInput.length(); i++) {
+            char firstCharacter = userInput.toCharArray()[i];
+            System.out.println("Input: " + firstCharacter);
+        }
+        
     }
+    
+    
 }
