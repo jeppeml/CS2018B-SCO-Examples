@@ -24,9 +24,11 @@ public class StringManipulation{
         String userInput = scanner.nextLine(); 
         String mystring = "";
         char ch = 'c';
+      
         for (int i = 0; i < userInput.length(); i++) {
             char firstCharacter = userInput.toCharArray()[i];
-            // or use: char firstCharacter = userInput.charAt(i);
+            // or use: 
+            // char firstCharacter = userInput.charAt(i);
             System.out.println("Input: " + firstCharacter);
         }
     }

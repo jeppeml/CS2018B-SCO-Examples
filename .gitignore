@@ -23,3 +23,6 @@
 hs_err_pid*
 /StringManipulation/nbproject/private/
 /StringManipulation/build/
+/ExampleInputOutputFXML/nbproject/private/
+/ExampleInputOutputFXML/dist/
+/ExampleInputOutputFXML/build/
