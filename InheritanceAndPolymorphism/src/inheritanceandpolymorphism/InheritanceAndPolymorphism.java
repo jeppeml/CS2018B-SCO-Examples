@@ -18,7 +18,7 @@ public class InheritanceAndPolymorphism {
      */
     public static void main(String[] args) {
         TestIt test = new TestIt();
-        test.run();
+        test.testInsertIntoList();
               
     }
     

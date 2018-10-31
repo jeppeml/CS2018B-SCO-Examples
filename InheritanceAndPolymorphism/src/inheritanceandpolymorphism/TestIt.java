@@ -12,11 +12,13 @@ import java.util.ArrayList;
  * @author jeppjleemoritzled
  */
 public class TestIt {
-    public void run()
+    
+    
+    public void testInsertIntoList()
     {
         Robot mrRobot = new Robot();
         mrRobot.setName("Pietr Stegreskey");
-        mrRobot.setBrand("Xiomi");
+        mrRobot.setBrand("Xiaomi");
         
         Robot hum = new Humanoid();
         hum.setName("Piotr Stroganoff");
