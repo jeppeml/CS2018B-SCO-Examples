@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package abstractclassesandinterfaces;
+package abstractclassesandinterfaces.people;
 
 /**
  *
@@ -18,6 +18,12 @@ public class Teacher extends Person{
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    protected String toNiceString() {
+        return super.toNiceString() +
+               " Salary: " + salary;
     }
     
     

@@ -3,18 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package abstractclassesandinterfaces;
+package abstractclassesandinterfaces.people;
 
 /**
  *
  * @author jeppjleemoritzled
  */
 public abstract class Person {
-    private String cprno;
-    private String name;
-    private String nationality;
+    protected String cprno;
+    protected String name;
+    protected String nationality;
+
+    @Override
+    public String toString() {
+        return toNiceString();
+    }
     
-    public abstract String toNiceString();
+    protected String toNiceString(){
+        return "Name : " + getName() +  " " +
+               "CPR-Number : " + getCprno() + " " +
+               "Nationality : " + getNationality();
+    }
 
     public String getCprno() {
         return cprno;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package abstractclassesandinterfaces;
+package abstractclassesandinterfaces.people;
 
 /**
  *
@@ -19,6 +19,12 @@ public class Student extends Person {
 
     public void setGradeavg(double gradeavg) {
         this.gradeavg = gradeavg;
+    }
+
+    @Override
+    protected String toNiceString() {
+        return super.toNiceString() +
+               " Grade average: " + gradeavg;
     }
 
 }
