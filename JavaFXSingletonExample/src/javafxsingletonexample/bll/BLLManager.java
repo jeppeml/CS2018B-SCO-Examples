@@ -13,7 +13,18 @@ import java.util.List;
  * @author jeppjleemoritzled
  */
 public class BLLManager {
+    private static BLLManager instance=null;
     List<String> toys = new ArrayList();
+    
+    private BLLManager(){
+    }
+    
+    public static BLLManager getInstance(){
+        if(instance==null)
+            instance = new BLLManager();
+        
+        return instance;
+    }
     
     public void addToy(String toy){
         toys.add(toy);

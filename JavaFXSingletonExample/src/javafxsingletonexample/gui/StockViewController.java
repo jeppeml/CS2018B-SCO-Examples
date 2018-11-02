@@ -5,17 +5,11 @@
  */
 package javafxsingletonexample.gui;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
 import javafxsingletonexample.bll.BLLManager;
 
 /**
@@ -27,14 +21,13 @@ public class StockViewController implements Initializable {
 
     @FXML
     private ListView<String> listInventory;
-    BLLManager bll = new BLLManager();
+    BLLManager bll = BLLManager.getInstance();
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-
     }    
 
     @FXML

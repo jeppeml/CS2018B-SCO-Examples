@@ -29,7 +29,7 @@ public class MainViewController implements Initializable {
     @FXML
     private ListView<String> listInventory;
     
-    BLLManager bll = new BLLManager();
+    BLLManager bll = BLLManager.getInstance();
     
     
     @Override
