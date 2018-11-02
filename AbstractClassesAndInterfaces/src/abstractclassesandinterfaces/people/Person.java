@@ -48,6 +48,14 @@ public abstract class Person {
     public void setNationality(String nationality) {
         this.nationality = nationality;
     }
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        Person compPerson = (Person)obj;
+        
+        if(compPerson.getCprno().equals(this.getCprno()))
+            return true;
+        return false;
+    }
     
 }

@@ -8,7 +8,6 @@ package abstractclassesandinterfaces;
 import abstractclassesandinterfaces.people.Student;
 import abstractclassesandinterfaces.people.Person;
 import abstractclassesandinterfaces.people.Teacher;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,8 +30,6 @@ public class AbstractClassesAndInterfaces{
         List<Student> studentList = new ArrayList();
         List<Teacher> teacherList = new ArrayList();
         
-        
-        
         Teacher t1 = new Teacher();
         t1.setName("Peter");
         t1.setCprno("030303-0302");
@@ -50,6 +47,7 @@ public class AbstractClassesAndInterfaces{
         s1.setCprno("070809-1405");
         s1.setGradeavg(7.33);
         studentList.add(s1);
+        
         
         List<Person> allPersons = new ArrayList();
         allPersons.addAll(teacherList);

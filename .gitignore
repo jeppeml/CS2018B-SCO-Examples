@@ -36,3 +36,8 @@ hs_err_pid*
 /InheritanceAndPolymorphism/build/
 /AbstractClassesAndInterfaces/nbproject/private/
 /AbstractClassesAndInterfaces/build/
+/SingletonExample/nbproject/private/
+/SingletonExample/build/
+/JavaFXSingletonExample/nbproject/private/
+/JavaFXSingletonExample/dist/
+/JavaFXSingletonExample/build/
