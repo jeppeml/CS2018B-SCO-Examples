@@ -43,3 +43,8 @@ hs_err_pid*
 /JavaFXSingletonExample/build/
 /StrategyExample/nbproject/private/
 /StrategyExample/build/
+/RefactoringAndDebugging/nbproject/private/
+/RefactoringAndDebugging/build/
+/RefactoringAndDebugging/dist/
+/TextFileRW/nbproject/private/
+/TextFileRW/build/
