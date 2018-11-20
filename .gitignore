@@ -48,3 +48,8 @@ hs_err_pid*
 /RefactoringAndDebugging/dist/
 /TextFileRW/nbproject/private/
 /TextFileRW/build/
+/SerializationAndObjects/nbproject/private/
+/SerializationAndObjects/build/
+/DatabaseExample/nbproject/private/
+/DatabaseExample/dist/
+/DatabaseExample/build/

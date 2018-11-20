@@ -33,6 +33,7 @@ public class TestFiles{
     public void appendName(String name) throws IOException {
         List<String> lines = new ArrayList();
         lines.add(name);
+        
         Files.write(path, 
                 lines, 
                 StandardOpenOption.APPEND, 
