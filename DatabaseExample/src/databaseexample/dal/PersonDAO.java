@@ -24,12 +24,75 @@ public class PersonDAO {
     public PersonDAO() {
         ds = new SQLServerDataSource();
         ds.setDatabaseName("CS2018B_40");
-        ds.setUser("CS2018B_40");
-        ds.setPassword("CS2018B_40");
+        ds.setUser("CS2018B_40_java");
+        ds.setPassword("javajava");
         ds.setPortNumber(1433);
         ds.setServerName("10.176.111.31");
     }
     
+    // crUd
+    public void updatePerson(Person p)
+    {
+        try (Connection con = ds.getConnection()){
+           String sql = "UPDATE Person SET name=?, job=? "
+                   + "WHERE cprno=?";
+           PreparedStatement stmt = con.prepareStatement(sql);
+           stmt.setString(1, p.getName());
+           stmt.setString(2, p.getJob());
+           stmt.setString(3, p.getCpr());
+           stmt.execute();
+        }
+        catch (SQLServerException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    // Crud
+    public Person createPerson(String cprno, String name, String job)
+    {
+        Person p = null;
+        try (Connection con = ds.getConnection()){
+           String sql = "INSERT INTO Person(cprno, name, job) "
+                   + "VALUES(?,?,?)";
+           PreparedStatement stmt = con.prepareStatement(sql);
+           stmt.setString(1, cprno);
+           stmt.setString(2, name);
+           stmt.setString(3, job);
+           stmt.execute();
+           p = new Person(cprno, name, job);
+        }
+        catch (SQLServerException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return p;
+    }
+    
+    
+    // cruD
+    public void deletePerson(Person p)
+    {
+        try (Connection con = ds.getConnection()){
+           String sql = "DELETE FROM Person WHERE cprno=?";
+           PreparedStatement stmt = con.prepareStatement(sql);
+           stmt.setString(1, p.getCpr());
+           stmt.execute();
+        }
+        catch (SQLServerException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    // cRud
     public Person getPerson(String cprno)
     {
         try (Connection con = ds.getConnection()){
@@ -62,6 +125,7 @@ public class PersonDAO {
         
     }
     
+    // cRud
     public List<Person> getAllPersons() 
     {
         List<Person> persons = new ArrayList();

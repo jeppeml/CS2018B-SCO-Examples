@@ -21,7 +21,24 @@ public class DAOTest {
             System.out.println(person);
         }*/
         
-        Person p = pdao.getPerson("641-93-3408");
+        Person peter = pdao.createPerson("324-34-5424", 
+                "Piotr Stregovskij", "Slacker");
+        
+        Person p = pdao.getPerson(peter.getCpr());
         System.out.println("Fetched person: " + p);
+        
+        p.setJob("Über Slacker 2.0");
+        p.setName("Piotr Gormanov Stregovskij");
+        pdao.updatePerson(p);
+        
+        p = pdao.getPerson(peter.getCpr());
+        System.out.println("Fetched UPDATED person: " + p);
+        
+        pdao.deletePerson(p);
+        p = pdao.getPerson(peter.getCpr());
+        if(p==null)
+            System.out.println("Success, Person is gone forever");
+        else
+            System.out.println("ERROR!!! ERROR!!!");
     }
 }
