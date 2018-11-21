@@ -30,6 +30,38 @@ public class PersonDAO {
         ds.setServerName("10.176.111.31");
     }
     
+    public Person getPerson(String cprno)
+    {
+        try (Connection con = ds.getConnection()){
+           /* String sqlStatement = "SELECT * FROM Person WHERE "
+                    + "cprno='" + cprno + "'"; // BAD
+            
+            Statement statement = con.createStatement();*/ // BAD BAD BAD
+            PreparedStatement pstmt =
+                    con.prepareStatement("SELECT * FROM Person WHERE cprno=?");
+            pstmt.setString(1, cprno);
+            ResultSet rs = pstmt.executeQuery();
+            while(rs.next())
+            {
+                String cpr = rs.getString("cprno");
+                String name = rs.getString("name");
+                String job = rs.getString("job");
+                Person p = new Person(cpr, name, job);
+                return p;
+            }
+            
+        }
+        catch (SQLServerException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(PersonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return null;
+        
+    }
+    
     public List<Person> getAllPersons() 
     {
         List<Person> persons = new ArrayList();

@@ -15,10 +15,13 @@ import java.util.List;
 public class DAOTest {
     public static void main(String[] args) {
         PersonDAO pdao = new PersonDAO();
-        List<Person> persons = pdao.getAllPersons();
+        /*List<Person> persons = pdao.getAllPersons();
         
         for (Person person : persons) {
             System.out.println(person);
-        }
+        }*/
+        
+        Person p = pdao.getPerson("641-93-3408");
+        System.out.println("Fetched person: " + p);
     }
 }
