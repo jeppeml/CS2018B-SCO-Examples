@@ -3,14 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package databaseexample;
+package databaseexample.gui;
 
+import databaseexample.be.Person;
+import databaseexample.dal.PersonDAO;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 
 /**
  *
@@ -18,10 +22,12 @@ import javafx.scene.control.Label;
  */
 public class MainController implements Initializable {
     
-    @FXML
     private Label label;
-    
     @FXML
+    private ListView<Person> lstPersons;
+    
+    private PersonModel model = new PersonModel();
+    
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
@@ -29,7 +35,22 @@ public class MainController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        lstPersons.setItems(model.getPersons());
     }    
+
+    @FXML
+    private void clickLoadList(ActionEvent event) {
+        // Load persons into list
+        
+        model.loadAllPersons();
+    }
+
+    @FXML
+    private void clickDelete(ActionEvent event) {
+        Person clickedPerson = 
+                lstPersons.getSelectionModel().getSelectedItem();
+        
+        model.deletePerson(clickedPerson);
+    }
     
 }

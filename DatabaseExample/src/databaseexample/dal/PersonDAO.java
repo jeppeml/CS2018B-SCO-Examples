@@ -24,8 +24,8 @@ public class PersonDAO {
     public PersonDAO() {
         ds = new SQLServerDataSource();
         ds.setDatabaseName("CS2018B_40");
-        ds.setUser("CS2018B_40_java");
-        ds.setPassword("javajava");
+        ds.setUser("CS2018B_40");
+        ds.setPassword("CS2018B_40");
         ds.setPortNumber(1433);
         ds.setServerName("10.176.111.31");
     }

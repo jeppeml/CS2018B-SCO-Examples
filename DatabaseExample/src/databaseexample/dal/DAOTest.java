@@ -6,7 +6,6 @@
 package databaseexample.dal;
 
 import databaseexample.be.Person;
-import java.util.List;
 
 /**
  *
