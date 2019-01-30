@@ -78,7 +78,7 @@ public class MainController implements Initializable {
         MenuItem whatIs = new MenuItem("What is?");
         ctx.getItems().add(whatIs);
         
-        whatIs.setOnAction(e->{System.out.println("Is: " + e.getSource());});
+        whatIs.setOnAction(event->{System.out.println("Is: " + e.getSource());});
         
         button.addEventHandler(MouseEvent.MOUSE_CLICKED, 
             new EventHandler<MouseEvent>(){
