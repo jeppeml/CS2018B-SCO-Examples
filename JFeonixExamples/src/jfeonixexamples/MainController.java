@@ -10,6 +10,9 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.NumberValidator;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,27 +40,45 @@ public class MainController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
+        label.setText("");
+        Thread t = new Thread(()->{
+            simulateHardWork();
+        });
+        t.start();
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        
+        
+    }
+    
+    private void simulateHardWork(){
+        try {
+            Thread.sleep(5000);
+            Platform.runLater(()->{
+                label.setText("Done working");
+            });
+            
+        }
+        catch (InterruptedException ex) {
+            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        NumberValidator nv = new NumberValidator("This doesn't look like a number?");
-        nv.setMessage("WRONG!");
-        txtSomeInput.setValidators(nv);
+        NumberValidator nv = new NumberValidator("Not number?");
+        //nv.setMessage("WRONG!");
+        txtSomeInput.getValidators().add(nv);
         txtSomeInput.setText("");
         txtSomeInput.textProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    
-            //nv.validate();
+            txtSomeInput.validate();/*
             try{
                 Double d = Double.parseDouble(newValue);
             }
             catch (NumberFormatException nfe)
             {
                 txtSomeInput.setText(oldValue);
-            }
+            }*/
         });
         
         slide.valueProperty().addListener((observable, oldValue, newValue) -> {
