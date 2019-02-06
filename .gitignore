@@ -66,3 +66,5 @@ hs_err_pid*
 /CSSStuff/build/
 /CSSStuff/dist/
 /JFeonixExamples/nbproject/private/
+/JFeonixExamples/build/
+/JFeonixExamples/dist/
