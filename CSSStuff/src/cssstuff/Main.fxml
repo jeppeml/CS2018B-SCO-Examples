@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="potato" fx:id="potato" prefHeight="424.0" prefWidth="424.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="cssstuff.MainController">
+<AnchorPane id="potato" fx:id="potato" prefHeight="424.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cssstuff.MainController">
     <children>
         <Button id="hat" fx:id="button" layoutX="34.0" layoutY="32.0" onAction="#handleButtonAction" text="Click Me!" />
         <Label fx:id="label" layoutX="28.0" layoutY="164.0" minHeight="16" minWidth="69" />
