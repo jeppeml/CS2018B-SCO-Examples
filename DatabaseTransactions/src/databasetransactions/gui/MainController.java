@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package databasetransactions;
+package databasetransactions.gui;
 
+import databasetransactions.Person;
+import databasetransactions.bll.BLLManager;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -28,25 +30,22 @@ public class MainController implements Initializable {
     private TableColumn<Person, String> colName;
     @FXML
     private TableColumn<Person, Integer> colId;
-    Person peter = new Person();
+    
     @FXML
     private TextField txtName;
+    BLLManager bllmgr = new BLLManager();
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
-        //peter.setName(txtName.getText());
-        
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        peter.setId(1337666);
-        peter.setName("Peter Stegger");
-        txtName.setText(peter.getName());
-        peter.nameProperty().bind(txtName.textProperty());
-        tablePersons.getItems().add(peter);
+        tablePersons.getItems().clear();
+        tablePersons.getItems().addAll(bllmgr.getAll());
+
         colId.setCellValueFactory(
                 cell->cell.getValue().idProperty().asObject());
         colName.setCellValueFactory(

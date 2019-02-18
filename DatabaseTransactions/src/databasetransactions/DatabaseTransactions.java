@@ -19,7 +19,7 @@ public class DatabaseTransactions extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("gui/Main.fxml"));
         
         Scene scene = new Scene(root);
         
