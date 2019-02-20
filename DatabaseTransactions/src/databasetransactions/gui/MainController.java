@@ -30,10 +30,14 @@ public class MainController implements Initializable {
     private TableColumn<Person, String> colName;
     @FXML
     private TableColumn<Person, Integer> colId;
+    @FXML
+    private TableColumn<Person, Float> colBalance;
+    
     
     @FXML
     private TextField txtName;
     BLLManager bllmgr = new BLLManager();
+    
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -50,6 +54,12 @@ public class MainController implements Initializable {
                 cell->cell.getValue().idProperty().asObject());
         colName.setCellValueFactory(
                 cell->cell.getValue().nameProperty());
+        colBalance.setCellValueFactory(
+                cell->cell.getValue().balanceProperty().asObject());
     }    
+
+    @FXML
+    private void btnSaveBalanceClick(ActionEvent event) {
+    }
     
 }

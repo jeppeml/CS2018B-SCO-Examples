@@ -15,7 +15,21 @@ public class Person {
 
     private final StringProperty name = new SimpleStringProperty();
     private final IntegerProperty id = new SimpleIntegerProperty();
+    private final FloatProperty balance = new SimpleFloatProperty();
 
+    public float getBalance() {
+        return balance.get();
+    }
+
+    public void setBalance(float value) {
+        balance.set(value);
+    }
+
+    public FloatProperty balanceProperty() {
+        return balance;
+    }
+    
+    
     public int getId() {
         return id.get();
     }
