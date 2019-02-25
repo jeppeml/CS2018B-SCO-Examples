@@ -52,4 +52,9 @@ public class PersonDAOMock implements PersonDAO {
         return persons;
         
     }
+
+    @Override
+    public void withdraw(Person p, float amount) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

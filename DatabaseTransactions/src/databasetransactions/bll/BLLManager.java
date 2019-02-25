@@ -16,6 +16,10 @@ import java.util.List;
 public class BLLManager {
     PersonDAO persondao = new PersonDAODB();
     
+    public void withdraw(Person p, float amount){
+        persondao.withdraw(p, amount);
+    }
+    
     public void addPerson(Person p){
         persondao.add(p);
     }

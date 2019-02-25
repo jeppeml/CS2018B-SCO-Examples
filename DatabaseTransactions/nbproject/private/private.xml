@@ -5,9 +5,6 @@
         <group name="Projects">
             <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/bll/BLLManager.java</file>
             <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/dal/PersonDAO.java</file>
-            <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/gui/Main.fxml</file>
-            <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/DatabaseTransactions.java</file>
-            <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/dal/PersonDAOMock.java</file>
             <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/dal/PersonDAODB.java</file>
             <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/gui/MainController.java</file>
             <file>file:/Users/jeppjleemoritzled/GitHub/CS2018B-SCO-Examples/DatabaseTransactions/src/databasetransactions/dal/DBConnector.java</file>

@@ -59,7 +59,13 @@ public class MainController implements Initializable {
     }    
 
     @FXML
-    private void btnSaveBalanceClick(ActionEvent event) {
+    private void btnWithdrawClick(ActionEvent event) {
+        Person selected =
+            tablePersons.getSelectionModel().getSelectedItem();
+        
+        bllmgr.withdraw(selected, 
+                Float.parseFloat(txtName.getText()));
+        
     }
     
 }

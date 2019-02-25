@@ -24,4 +24,6 @@ public interface PersonDAO {
 
     public void update(Person p);
     
+    public void withdraw(Person p, float amount);
+    
 }
