@@ -72,3 +72,6 @@ hs_err_pid*
 /QueueExamples/build/
 /ComparatorsExamples/nbproject/private/
 /ComparatorsExamples/build/
+/ComparatorInAGUI/nbproject/private/
+/ComparatorInAGUI/build/
+/ComparatorInAGUI/dist/
