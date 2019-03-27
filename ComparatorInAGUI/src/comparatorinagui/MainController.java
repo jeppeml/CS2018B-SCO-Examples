@@ -27,6 +27,7 @@ public class MainController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
+        
         StudentComparator comp =
                 new StudentComparator(StudentComparator.SortType.grade, StudentComparator.SortOrder.asc);
         Collections.sort(lstStudents.getItems(), comp);
